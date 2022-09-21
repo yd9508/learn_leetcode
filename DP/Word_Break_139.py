@@ -7,6 +7,7 @@ Note that the same word in the dictionary may be reused multiple times in the se
 class Solution:
     def wordBreak(self, s, wordDict):
         d = [False] * len(s)
+        # for each i, check both there exist w in wordDict such that it can meet the substr end with i and d[i - len(w] is True or i - len(w) == -1
         for i in range(len(s)):
             for w in wordDict:
                 if w == s[i - len(w) + 1:i + 1] and (d[i - len(w)] or i - len(w) == -1):
