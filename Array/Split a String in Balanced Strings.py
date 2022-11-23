@@ -15,5 +15,5 @@ class Solution:
             return 1 if s[1] != s[0] else 0
 
         for i in range(len(s)):
-            
+
 
